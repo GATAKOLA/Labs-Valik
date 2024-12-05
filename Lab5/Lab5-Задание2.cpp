@@ -1,33 +1,33 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <string_view>
 #include <cassert>
 
 std::string_view Find(std::string_view str) 
 {
-    size_t a = str.find(' ');
-    if (a == std::string_view::npos)
+    size_t firstpos = str.find(' ');
+    if (firstpos == std::string_view::npos)
     {
         return "";
     }
 
-    size_t b = str.find(' ', a + 1);
+    size_t secondpos = str.find(' ', firstpos + 1);
 
-    if (b == std::string_view::npos) 
+    if (secondpos == std::string_view::npos) 
     {
-        return str.substr(a + 1);
+        return str.substr(firstpos + 1);
     }
 
-    return str.substr(a + 1, b - (a + 1));
+    return str.substr(firstpos + 1, secondpos - (firstpos + 1));
 }
 
 void runTests() 
 {
-    assert(Find("Volvo audi test") == "audi"); //2 пробела
-    assert(Find("Volvo audi") == "audi"); //1 пробел
-    assert(Find("Volvo ") == ""); //пробел в конце
-    assert(Find("Volvoaudi") == ""); //нет пробелов
-    assert(Find(" Volvoaudi") == "Volvoaudi"); //пробел первый
-    assert(Find("") == ""); //пусто
+    assert(Find("Volvo audi test") == "audi"); //2 РїСЂРѕР±РµР»Р°
+    assert(Find("Volvo audi") == "audi"); //1 РїСЂРѕР±РµР»
+    assert(Find("Volvo ") == ""); //РїСЂРѕР±РµР» РІ РєРѕРЅС†Рµ
+    assert(Find("Volvoaudi") == ""); //РЅРµС‚ РїСЂРѕР±РµР»РѕРІ
+    assert(Find(" Volvoaudi") == "Volvoaudi"); //РїСЂРѕР±РµР» РїРµСЂРІС‹Р№
+    assert(Find("") == ""); //РїСѓСЃС‚Рѕ
 }
 
 int main() 

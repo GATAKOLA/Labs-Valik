@@ -21,6 +21,6 @@ int main()
 
 
 /*
-Типы данных: int, Leg, Arm, Person
-Объект: person
+Типы данных: int, Leg, Arm, Person, std::array
+Объект: person, length, power, legs, arms
 */

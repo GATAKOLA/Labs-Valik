@@ -5,7 +5,7 @@ int main()
     int i = 69, number = 72;
     i+=number;
 
-    int arr[3];
+    int arr[3] = {0};
     arr[0];
     arr[2];
 
