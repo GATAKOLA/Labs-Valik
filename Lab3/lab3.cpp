@@ -1,4 +1,4 @@
-struct Leg
+п»їstruct Leg
 {
     int length;
 };
@@ -21,8 +21,8 @@ int main()
 
 
 /*
-Типы данных: int, Leg, Arm, Person, std::array
-Объект: person, length, power, legs, arms
+РўРёРїС‹ РґР°РЅРЅС‹С…: int, Leg, Arm, Person, std::array
+РћР±СЉРµРєС‚: person, length, power, legs, arms
 
-я бы перезаписал первый Leg вот так: person.legs[0].length = 100;
+СЏ Р±С‹ РїРµСЂРµР·Р°РїРёСЃР°Р» РїРµСЂРІС‹Р№ Leg РІРѕС‚ С‚Р°Рє: person.legs[0].length = 100;
 */
