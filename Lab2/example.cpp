@@ -7,7 +7,7 @@ struct TwoInts //создаём структуру с целочистенным
     int b;
 };
 
-struct StructWithArray //создаём структуру с целочистенными переменными arr и someNumber, где arr это массив с максимум 4 элементами, а someNumber это указатель
+struct StructWithArray //создаём структуру с целочистенными переменными arr и someNumber, где arr это массив с 4 элементами, а someNumber это указатель
 {
     int arr[4];
     int* someNumber;
