@@ -23,4 +23,6 @@ int main()
 /*
 Типы данных: int, Leg, Arm, Person, std::array
 Объект: person, length, power, legs, arms
+
+я бы перезаписал первый Leg вот так: person.legs[0].length = 100;
 */

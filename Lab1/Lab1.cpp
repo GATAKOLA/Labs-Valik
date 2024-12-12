@@ -6,8 +6,6 @@ int main()
     i+=number;
 
     int arr[3] = {0};
-    arr[0];
-    arr[2];
 
     int* pi = &i;
     number = *pi;

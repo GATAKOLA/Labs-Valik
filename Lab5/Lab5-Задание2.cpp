@@ -10,14 +10,15 @@ std::string_view Find(std::string_view str)
         return "";
     }
 
-    size_t secondpos = str.find(' ', firstpos + 1);
+    str.remove_prefix(firstpos + 1);
 
+    size_t secondpos = str.find(' ');
     if (secondpos == std::string_view::npos) 
     {
-        return str.substr(firstpos + 1);
+        return str;
     }
 
-    return str.substr(firstpos + 1, secondpos - (firstpos + 1));
+    return str.substr(0, secondpos);
 }
 
 void runTests() 
@@ -28,6 +29,7 @@ void runTests()
     assert(Find("Volvoaudi") == ""); //нет пробелов
     assert(Find(" Volvoaudi") == "Volvoaudi"); //пробел первый
     assert(Find("") == ""); //пусто
+    assert(Find("Volvo  audi  test") == ""); //2 пробела подряд
 }
 
 int main() 

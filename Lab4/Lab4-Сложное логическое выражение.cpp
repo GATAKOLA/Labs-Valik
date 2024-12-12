@@ -10,7 +10,6 @@ struct Fruit
 void main()
 {
     Fruit fructs;
-    bool result;
 
     std::cout << "Apples:";
     std::cin >> fructs.apples;
@@ -21,16 +20,17 @@ void main()
     std::cout << "Oranges:";
     std::cin >> fructs.oranges;
 
+    bool result;
     {
         bool apleif = fructs.apples > 5;
         bool pearsf = fructs.pears < 8;
         bool orangesif = (fructs.oranges == 2 * fructs.apples);
 
         result = apleif && pearsf && orangesif;
+    }
 
-        if (result)
-        {
-            std::cout << "Hello" << std::endl;
-        }
+    if (result)
+    {
+        std::cout << "Hello" << std::endl;
     }
 }
